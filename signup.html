@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            padding-top: 100px;
+        }
+        h2{
+            text-align: center;
+            padding: 5px;
+        }
+        #box{
+            width: 300px;
+            margin: auto;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; 
+            padding: 15px;
+        }
+    
+           
+            
+        
+        form{
+            width: 300px;
+            margin-left: 20px;
+        }
+        form>label{
+           
+            margin-top: 20px;
+            font-size: 18px;
+           
+        }
+        form input{
+            width: 80%;
+            padding: 7px;
+            margin-bottom: 14px;
+           
+        }
+        p{
+            width: 95%;
+            font-size: 16px;
+        }
+        button{
+            width: 90%;
+            padding: 5px;
+            background-color: rgb(200, 189, 189);
+            border: 0px;
+            border-radius: 10px 10px 10px 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+      
+        <h2>Sign Up</h2>
+       <form>
+        <label>Name</label>
+        <input type="text" placeholder="Enter name" id="name">
+        <label>Email</label>
+        <input type="text" placeholder="Enter email" id="email">
+        <label>Mobile number</label>
+        <input type="number" placeholder="Enter mobile number" id="mobile">
+        <label>Password</lable>
+        <input type="password" placeholder="Enter password" id="password">
+        
+        <p>By signing up, I accept Term & Services</p>
+        <button> Sign Up</button>
+       </form>
+    
+           <p> Already have an account?<a href="signin.html">Sign in</a></p>
+    
+    </div>
+</body>
+</html>
+<script>
+    let form = document.querySelector("form");
+    let signupLs = JSON.parse(localStorage.getItem("signup")) || [];
+
+    form.addEventListener("submit",function(el){
+        el.preventDefault();
+        let obj={
+            name : form.name.value,
+            email: form.email.value,
+            mobile: form.mobile.value,
+            password : form.password.value,
+        }
+          if(obj.name == "" && obj.email == "" && obj.password == ""){
+            alert("Empty")
+            return;
+          }
+        signupLs.push(obj)
+        localStorage.setItem("signup",JSON.stringify(signupLs));
+       
+    });
+</script>
