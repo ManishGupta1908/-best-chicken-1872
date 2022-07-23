@@ -8,6 +8,7 @@
     <style>
         body{
             padding-top: 100px;
+            background-color: rgb(234, 203, 203);
         }
         h2{
             text-align: center;
@@ -18,11 +19,9 @@
             margin: auto;
             box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; 
             padding: 15px;
-        }
-        #data{
-           
             
         }
+        
         form{
             width: 300px;
             margin-left: 20px;
@@ -56,7 +55,7 @@
         }
         form > label > a{
             margin-left: 60px;
-            color: rgb(48, 25, 25);
+            color: rgb(196, 52, 52);
             text-decoration: none;
 
         }
@@ -68,12 +67,12 @@
         <h2>Sign In</h2>
        <form>
         <label>Email</label>
-        <input type="text" placeholder="Enter email">
+        <input type="text" id="email" placeholder="Enter email">
         <label>Password <a href="">forget password?</a></lable>
-        <input type="password" placeholder="Enter password">
+        <input type="password" id="password" placeholder="Enter password">
         
+        <input type="submit" value="Sign In">
         
-        <button> Sign In</button>
         <button>CONTINUE WITH GOOGLE</button>
        </form>
     
@@ -84,8 +83,8 @@
 </html>
 <script>
    let form = document.querySelector("form");
-    let signupLs = JSON.parse(localStorage.getItem("signip")) || [];
-
+    let signupLs = JSON.parse(localStorage.getItem("signup")) || [];
+    
 
     form.addEventListener("submit",function(el){
         el.preventDefault();
@@ -97,17 +96,22 @@
             email: form.email.value,
             password : form.password.value,
         }
+           flag=false
         signupLs.forEach(function(el){
 
           if(el.email == obj.email   && el.password == obj.password ){
-
+            flag=true;
             localStorage.setItem("signin",
             JSON.stringify(el));
-            alert("signin successful")
-            window.location.href="mens.html"
+            alert("Signin Successful");
+            window.location="nord.html";
+            
           }
-        })
-        alert("user not Exist")
+          
+    })
+    if(flag=false){
+    alert("User not Exist")
+}
         
     });  
 </script>

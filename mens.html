@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .pick{
+            background-color: yellow;
+            padding: 10px;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+       
+        
+        #nord{
+            width: 95%;
+            display: flex;
+            justify-content: space-between;
+            margin: auto;
+            
+        }
+        #nord>input{
+            
+            height: 30px;
+            width: 75%;
+        }
+       
+        #nord>a{
+             font-size: 30px;
+             font-weight: bold;
+             color: black;
+             text-decoration: none;
+             padding-left: 10px;
+        }
+        
+
+        #btn>button{
+            border: none;
+            margin: 1.4%;
+            background-color: white;
+            font-size: 16px;
+            color: grey;
+        }
+        #btn>a{
+            border: none;
+            margin: 1.4%;
+            background-color: white;
+            font-size: 16px;
+            color: grey; 
+            text-decoration: none;
+        }
+      h1{
+        margin-left: 20px;
+        margin-bottom: 50px;
+        color: rgb(77, 61, 61);
+        font-size: 26px;
+      }
+      
+
+      
+      #box {
+        width: 90%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        
+        
+      }
+      #box  div{
+        margin-bottom: 45px;
+      }
+      #box>div>img{
+        width: 75%;
+        height: 60%;
+      }
+      
+      
+    </style>
+</head>
+<body>
+  
+  <div class="pick">
+    <div> Pick Up Today—in store or curbside. Learn More <span>India</span></div>
+     
+</div>
+<div id="nord"> 
+   <a href="nord.html"> NORDSTROM</a>
+    <input type="text" placeholder="       search for products or brands">
+   
+</div>
+<div id="btn">
+    <button>Anniversary Sale</button>
+    <a href="women.html">Women</a>
+    <a href="mens.html">Men</a>
+    <button>Kids</button>
+    <button>Youngs</button>
+    <button>Adult</button>
+    <button>Activewear</button>
+    <button>Home</button>
+    <button>Beauty</button>
+    <button>Designer</button>
+    <button>Gifts</button>
+    <button>Sale</button>
+    <button>Brands</button>
+
+
+</div>
+<h1>Men's Clothing</h1>
+  
+    <div id="box">
+      
+    </div>
+
+
+</body>
+</html>
+<script>
+    var mensData = [
+    {
+      image_url:
+        "https://n.nordstrommedia.com/id/sr3/f16eb538-df95-49b4-842d-cefad60f8289.jpeg?h=365&w=240&dpr=2",
+      name: "MEN'S REEBOK T-shirt",
+      price: "1170",
+      strikedoffprice: "2599",
+    },
+    {
+      image_url:
+        "https://n.nordstrommedia.com/id/sr3/3df22c0e-c555-4f77-9c95-9a4d8a34e8de.jpeg?h=365&w=240&dpr=2",
+      name: "Seaford Linen Shirt ",
+      price: 699,
+      strikedoffprice: 999,
+    },
+    {
+      image_url:
+        "https://n.nordstrommedia.com/id/sr3/47bea57b-703d-45b2-8233-811e541defd0.jpeg?h=365&w=240&dpr=2",
+      name: " MEN'S REEBOK RUNNING AUSTIN SHOES",
+      price: 945,
+      strikedoffprice: 2099,
+    },
+    {
+      image_url:
+        "https://n.nordstrommedia.com/id/sr3/475ad016-f828-460c-a8df-6126dbec65cf.jpeg?h=365&w=240&dpr=2",
+      name: "MEN'S REEBOK SWIM AVENGER FLIP LP SLIPPERS",
+      price: 399,
+      strikedoffprice: 799,
+    },
+    {
+      image_url:
+        "https://n.nordstrommedia.com/id/sr3/f0fec7df-01d0-4d2d-b626-77752a7af6ea.jpeg?h=365&w=240&dpr=2",
+      name: "Flying Machine Solid White Shirt ",
+      price: 1620,
+      strikedoffprice: 3599,
+    },
+    {
+      image_url:
+        "https://n.nordstrommedia.com/id/sr3/615d612c-3b82-474a-9dd9-46ec8f22a849.jpeg?h=365&w=240&dpr=2 ",
+      name: " MEN'S Graphic Tee ",
+      price: 1440,
+      strikedoffprice: 3199,
+    },
+    {
+      image_url:
+        "https://n.nordstrommedia.com/id/sr3/7fa23b7e-d6bc-4924-a62c-c02deab98686.jpeg?h=365&w=240&dpr=2 ",
+      name: " MEN'S Polo T-shirt ",
+      price: 1999,
+      strikedoffprice: 3199,
+    },
+    {
+      image_url:
+        "https://n.nordstrommedia.com/id/sr3/c0438970-d767-4b00-9607-8455fceb0e42.jpeg?h=365&w=240&dpr=2 ",
+      name: "MEN'S REEBOK TRAINING  POLO T-SHIRTS TEE  ",
+      price: 769,
+      strikedoffprice: 1099,
+    },
+    {
+      image_url:
+        "https://content.shop4reebok.com/static/Product-GP7180/reebok_GP7180_1.jpg.plp",
+      name: "MEN'S REEBOK TRAINING WORKOUT  TEE  ",
+      price: 1299,
+      strikedoffprice: 1440,
+    },
+    {
+      image_url:
+        "https://content.shop4reebok.com/static/Product-EX3924/reebok_EX3924_1.jpg.plp ",
+      name: "MEN'S REEBOK SUPER SOFT FLIP SLIPPERS",
+      price: 699,
+      strikedoffprice: 999,
+    },
+    {
+      image_url:
+        "https://content.shop4reebok.com/static/Product-FW0343/reebok_FW0343_1.jpg.plp ",
+      name: "MEN'S REEBOK RUNNING RUN SHOES  ",
+      price: 1620,
+      strikedoffprice: 3599,
+    },
+    {
+      image_url:
+        "https://content.shop4reebok.com/static/Product-EX4285/reebok_EX4285_1.jpg.plp ",
+      name: "MEN'S REEBOK RUNNING GENESIS RUNNER SHOES  ",
+      price: 1620,
+      strikedoffprice: 3599,
+    },
+    
+  ];
+   
+
+</script>
+
+<script>
+    let box=document.getElementById("box")
+    function Display(Data){
+        Data.forEach(function(el){
+        let product =document.createElement("div")
+        let img =document.createElement("img")
+         img.src = el.image_url;
+
+         let name =document.createElement("p");
+         name.innerText = el.name;
+
+         let price =document.createElement("h2");
+         price.innerText = el.price;
+
+         let strikedoffprice =document.createElement("p");
+         strikedoffprice.innerText = el.strikedoffprice;
+
+         let cart = document.createElement("button")
+         cart.innerText = "Add to cart"
+
+        product.append(img,name,price,strikedoffprice,cart);
+        box.append(product);
+        });
+    }
+    Display(mensData)
+</script>

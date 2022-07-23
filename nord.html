@@ -7,15 +7,13 @@
     <title>Document</title>
     <style>
         .pick{
-            background-color: yellow;
+            background-color: rgb(188, 188, 48);
             padding: 10px;
             text-align: center;
             margin-bottom: 25px;
         }
-        div+span{
-            display: flex;
-            align-items: flex-end;
-        }
+        
+        
         #nord{
             width: 95%;
             font-size: 30px;
@@ -29,9 +27,11 @@
             height: 30px;
             width: 600px;
         }
-        #nord>div>a{
+        #nord>a{
             color: black;
             font-size: 22px;
+            text-decoration: none;
+            font-weight: 200;
         }
         
 
@@ -42,23 +42,38 @@
             font-size: 16px;
             color: grey;
         }
+        #btn>a{
+            border: none;
+            margin: 1.8%;
+            background-color: white;
+            font-size: 18px;
+            color: grey; 
+            text-decoration: none;
+            display: inline-block;
+        }
         #bigBox{
             display: flex;
             
         }
         #bigBox>.services{
             width: 250px;
-            height: 700px;
-            margin-left: 15px;
-            margin-right: 25px;
+             margin-left: 15px;
+            margin-right: 25px; 
+            
         }
-        #bigBox>.services>button{
+        #bigBox>.services>a{
             border: none;
             background-color:white;
-            margin-top: 20px;
-            font-size: 14px;
+            margin-bottom: 15px;
+            font-size: 18px;
             color: grey;
+            text-decoration: none;
+            display: inline-block;
+            
+            
         }
+       
+        
         .need{
             text-align: center;
             background-color:#F6F6F6 ;
@@ -171,52 +186,52 @@
 </head>
 <body>
     <div class="pick">
-        <div> Pick Up Today—in store or curbside. Learn More <span>India</span></div>
+        <div> Pick Up Today—in store or curbside. Learn More </div>
+        
          
     </div>
     <div id="nord"> 
        <div> NORDSTROM</div>
-        <input type="text" placeholder="search for products or brands">
+        <input type="text" placeholder="  search for products or brands">
         <a href="signin.html">Sign In</a>
     </div>
     <div id="btn">
-        <button>Anniversary Sale</button>
-        <button>Women</button>
-        <button>Men</button>
-        <button>Kids</button>
-        <button>Youngs</button>
-        <button>Adult</button>
-        <button>Activewear</button>
-        <button>Home</button>
-        <button>Beauty</button>
-        <button>Designer</button>
-        <button>Gifts</button>
-        <button>Sale</button>
-        <button>Brands</button>
+        <a href="https://www.nordstrom.com/?origin=tab-logo">Anniversary Sale</a>
+        <a href="women.html">Women</a>
+        <a href="mens.html">Men</a>
+        <a href="https://www.nordstrom.com/?origin=tab-logo">Kids</a>
+        <a href="https://www.nordstrom.com/?origin=tab-logo">Youngs</a>
+        <a href="https://www.nordstrom.com/?origin=tab-logo">Activewear</a>
+        <a href="https://www.nordstrom.com/?origin=tab-logo">Home</a>
+        <a href="">Beauty</a>
+        <a href="">Designer</a>
+        <a href="">Gifts</a>
+        <a href="">Sale</a>
+        <a href="">Brands</buttoa>
 
 
     </div>
     <div id="bigBox">
         <div class="services">
             <h3>Customer Service</h3>
-            <button>Check Order Status</button>
-            <button>Return & Exchange</button>
-            <button>Pricing & Adjustments</button>
-            <button>Frequently Asked Question</button>
-            <button>Pickup & delivery</button>
-            <button>Pay Bill Online</button>
-            <button>Buy Gift Card</button>
-            <button>Check Gift Balence</button>
-            <button>Find a Store</button>
-            <button>Nordstrom Policies</button>
-            <button>Customer Reviews</button>
-            <button>Product Recall & Issues</button>
+            <a href="https://www.nordstrom.com/signin/order-lookup">Check Order Status</a>
+            <a href="https://www.nordstrom.com/browse/customer-service/return-policy?breadcrumb=Home%2FCustomer%20Service%2FReturns%20%26%20Exchanges">Return & Exchange</a>
+            <a href="https://www.nordstrom.com/browse/customer-service/policy/pricing-policy?breadcrumb=Home%2FCustomer%20Service%2FPricing%20%26%20Adjustments">Pricing & Adjustments</a>
+            <a href="https://www.nordstrom.com/browse/customer-service/frequently-asked-questions?breadcrumb=Home%2FCustomer%20Service%2FFrequently%20Asked%20Questions">Frequently Asked Question</a>
+            <a href="https://www.nordstrom.com/browse/customer-service/shipping-methods-charges?breadcrumb=Home%2FCustomer%20Service%2FPickup%20%26%20Delivery">Pickup & delivery</a>
+            <a href="https://www.nordstromcard.com/login">Pay Bill Online</a>
+            <a href="">Buy Gift Card</a>
+            <a href="">Check Gift Balence</a>
+            <a href="">Find a Store</a>
+            <a href="">Nordstrom Policies</a>
+            <a href="">Customer Reviews</a>
+            <a href="">Product Recall & Issues</a>
             <br>
             <h3>Featured</h3>
             
-            <button>Nordstrom Services</button>
-            <button>International Shopping</button>
-            <button>Single & Split shoe Program</button>
+            <a href="">Nordstrom Services</a>
+            <a href="">International Shopping</a>
+            <a href="">Single & Split shoe Program</a>
         </div>
         <div>
 
