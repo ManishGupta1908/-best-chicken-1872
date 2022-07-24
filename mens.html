@@ -57,7 +57,15 @@
         color: rgb(77, 61, 61);
         font-size: 26px;
       }
-      
+      select{
+        padding: 6px;
+        background-color: rgb(47, 61, 61);
+        color: aliceblue;
+        font-size: 16px;
+        margin-bottom: 25px;
+        border-radius: 5px;
+        margin-top: -15px;
+      }
 
       
       #box {
@@ -108,6 +116,12 @@
 
 </div>
 <h1>Men's Clothing</h1>
+  <select  id="filter">
+    <option value=>"Select Catagory"</option>
+    <option value="Casual">Casual</option>
+    <option value="Sports">Sports</option>
+    <option value="Formals">Formals</option>
+  </select>
   
     <div id="box">
       
@@ -124,6 +138,7 @@
       name: "MEN'S REEBOK T-shirt",
       price: "1170",
       strikedoffprice: "2599",
+      Catagory: "Sports",
     },
     {
       image_url:
@@ -131,6 +146,7 @@
       name: "Seaford Linen Shirt ",
       price: 699,
       strikedoffprice: 999,
+      Catagory: "Formals",
     },
     {
       image_url:
@@ -138,6 +154,7 @@
       name: " MEN'S REEBOK RUNNING AUSTIN SHOES",
       price: 945,
       strikedoffprice: 2099,
+      Catagory:"Casual",
     },
     {
       image_url:
@@ -145,6 +162,7 @@
       name: "MEN'S REEBOK SWIM AVENGER FLIP LP SLIPPERS",
       price: 399,
       strikedoffprice: 799,
+      Catagory: "Sports",
     },
     {
       image_url:
@@ -152,6 +170,7 @@
       name: "Flying Machine Solid White Shirt ",
       price: 1620,
       strikedoffprice: 3599,
+      Catagory: "Formals",
     },
     {
       image_url:
@@ -159,6 +178,7 @@
       name: " MEN'S Graphic Tee ",
       price: 1440,
       strikedoffprice: 3199,
+      Catagory: "Sports",
     },
     {
       image_url:
@@ -166,6 +186,7 @@
       name: " MEN'S Polo T-shirt ",
       price: 1999,
       strikedoffprice: 3199,
+      Catagory: "Sports",
     },
     {
       image_url:
@@ -173,6 +194,7 @@
       name: "MEN'S REEBOK TRAINING  POLO T-SHIRTS TEE  ",
       price: 769,
       strikedoffprice: 1099,
+      Catagory:"Casual",
     },
     {
       image_url:
@@ -180,6 +202,7 @@
       name: "MEN'S REEBOK TRAINING WORKOUT  TEE  ",
       price: 1299,
       strikedoffprice: 1440,
+      Catagory: "Sports",
     },
     {
       image_url:
@@ -187,6 +210,7 @@
       name: "MEN'S REEBOK SUPER SOFT FLIP SLIPPERS",
       price: 699,
       strikedoffprice: 999,
+      Catagory:"Casual",
     },
     {
       image_url:
@@ -194,6 +218,7 @@
       name: "MEN'S REEBOK RUNNING RUN SHOES  ",
       price: 1620,
       strikedoffprice: 3599,
+      Catagory: "Sports",
     },
     {
       image_url:
@@ -201,6 +226,7 @@
       name: "MEN'S REEBOK RUNNING GENESIS RUNNER SHOES  ",
       price: 1620,
       strikedoffprice: 3599,
+      Catagory: "Sports",
     },
     
   ];
@@ -210,7 +236,9 @@
 
 <script>
     let box=document.getElementById("box")
+    let filter =document.getElementById("filter");
     function Display(Data){
+      box.innerHTML=null;
         Data.forEach(function(el){
         let product =document.createElement("div")
         let img =document.createElement("img")
@@ -232,5 +260,11 @@
         box.append(product);
         });
     }
-    Display(mensData)
+    Display(mensData);
+    filter.addEventListener("change",function(){
+     let fil= mensData.filter(function(el){
+        return el.Catagory===filter.value
+      })
+      Display(fil);
+    })
 </script>
